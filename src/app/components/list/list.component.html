@@ -1,0 +1,58 @@
+{{product | json}}
+@if (product) {
+  <form>
+    <div>
+      <label for="id">ID</label>
+      <input id="id" pInputText [(ngModel)]="product.id" name="id">
+    </div>
+
+    <div>
+      <label for="name">name</label>
+      <input id="name" pInputText [(ngModel)]="product.name" name="name">
+    </div>
+  </form>
+}
+
+<p-table
+  [value]="products"
+  [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template #header>
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Quantity</th>
+      <td colspan="2">Opciones</td>
+    </tr>
+  </ng-template>
+
+  <ng-template #body let-item>
+    <tr>
+      <td>{{ item.id }}</td>
+      <td>{{ item.code }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.category }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>
+        <p-button
+          icon="pi pi-trash"
+          pTooltip="Eliminar"
+          severity="danger"
+          [raised]="true"
+          [rounded]="true"
+          variant="text"
+        />
+      </td>
+      <td>
+        <p-button
+          icon="pi pi-pencil"
+          pTooltip="Actualizar"
+          severity="warn"
+          (onClick)="findOne(item.id)"
+        />
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+
