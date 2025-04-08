@@ -26,8 +26,21 @@ SWITCH
 }
 
 FOR
+@for (product of products; track product.id; let x = $index) {
+  <br>
+  {{ x }} hola
+} @empty {
+  No hay productos
+}
 
+@for (product of products; track product.id; let x = $index) {
+  <br>
+  {{ x }} =hola
+}9
 
+@for (x of numeros; track x) {
+  {{ x  }}
+}
 <p hidden>Hola</p>
 <!--<input type="text" [ngModel]="name">-->
 
