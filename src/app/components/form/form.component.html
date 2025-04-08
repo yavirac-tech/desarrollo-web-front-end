@@ -1,12 +1,38 @@
-<form>
-  <div>
-    <label for="id">ID</label>
-    <input pInputText>
-  </div>
+<input type="text" [(ngModel)]="day">
+<br>
 
-  <div>
-    <label for="id">ID</label>
-    <input pInputText >
-  </div>
+IF
+@if (day === '1') {
+  <p> Dia 1</p>
+} @else {
+  <p>Dia no valido</p>
+}
+<br>
 
-</form>
+SWITCH
+@switch (day) {
+  @case ('1') {
+    Lunes
+  }
+  @case ('2') {
+    Martes
+  }
+  @case ('3') {
+    Miercoles
+  }
+  @default {
+    Dia incorrecto
+  }
+}
+
+FOR
+
+
+<p hidden>Hola</p>
+<!--<input type="text" [ngModel]="name">-->
+
+<!--<input type="text" [(ngModel)]="lastname">-->
+<!--<br>-->
+
+<!--{{ name }}-->
+<!--{{ lastname }}-->
