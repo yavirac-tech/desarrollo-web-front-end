@@ -46,7 +46,3 @@ export class ListComponent {
       });
   }
 }
-
-
-
-

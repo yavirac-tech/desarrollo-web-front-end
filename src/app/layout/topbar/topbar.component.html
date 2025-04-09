@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    <li [routerLink]="['/pages/home']">Home</li>
+    <li [routerLink]="['/pages/about']">About</li>
+    <li [routerLink]="['/pages/contact']">Contact</li>
+  </ul>
+</nav>
+
+<nav>
+  <ul>
+    <li (click)="linkHome()">Home</li>
+    <li (click)="linkAbout()">About</li>
+    <li (click)="linkContact()">Contact</li>
+  </ul>
+</nav>
