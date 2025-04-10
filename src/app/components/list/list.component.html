@@ -1,17 +1,4 @@
-{{product | json}}
-@if (product) {
-  <form>
-    <div>
-      <label for="id">ID</label>
-      <input id="id" pInputText [(ngModel)]="product.id" name="id">
-    </div>
-
-    <div>
-      <label for="name">name</label>
-      <input id="name" pInputText [(ngModel)]="product.name" name="name">
-    </div>
-  </form>
-}
+<app-form/>
 
 <p-table
   [value]="products"

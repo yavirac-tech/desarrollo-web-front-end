@@ -23,4 +23,8 @@ export class TopbarComponent {
   linkContact(){
     this.router.navigateByUrl('/pages/contact');
   }
+
+  linkForm(){
+    this.router.navigateByUrl('/pages/form/1');
+  }
 }

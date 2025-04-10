@@ -10,7 +10,6 @@ export const routes: Routes = [
   },
 
   {
-    title: 'Children',
     path: 'children',
     loadChildren: () => import('./components/list/list.routes'),
   },
@@ -19,6 +18,7 @@ export const routes: Routes = [
     path: 'pages',
     loadChildren: () => import('./pages/pages.routes'),
   },
+
   {
     path: 'login',
     redirectTo: 'children',

@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http';
 import {JsonPipe} from '@angular/common';
 import {InputText} from 'primeng/inputtext';
 import {FormsModule} from '@angular/forms';
+import {FormComponent} from '../form/form.component';
 
 export interface ProductInterface {
   id: number;
@@ -16,7 +17,7 @@ export interface ProductInterface {
 
 @Component({
   selector: 'app-list',
-  imports: [TableModule, ButtonModule, TooltipModule, JsonPipe, InputText, FormsModule],
+  imports: [TableModule, ButtonModule, TooltipModule, JsonPipe, InputText, FormsModule, FormComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
