@@ -7,11 +7,7 @@ import Theme from '@primeng/themes/material';
 import {provideHttpClient} from '@angular/common/http';
 import {definePreset} from '@primeng/themes';
 
-const MyPreset = definePreset(Theme, {
-  semantic: {
-    primary: 'blue'
-  }
-});
+const MyPreset = definePreset(Theme);
 
 export const appConfig: ApplicationConfig = {
   providers: [

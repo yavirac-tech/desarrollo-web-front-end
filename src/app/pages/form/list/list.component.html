@@ -1,0 +1,51 @@
+@if (product) {
+  {{data | json}}
+  <br>
+  <app-form [productIn]="product" 
+            (productOut)="catchData($event)"
+            (event1)="showEvent($event)"
+  />
+}
+
+<p-table
+  [value]="products"
+  [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template #header>
+    <tr>
+      <th>ID</th>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Quantity</th>
+      <td colspan="2">Opciones</td>
+    </tr>
+  </ng-template>
+
+  <ng-template #body let-item>
+    <tr>
+      <td>{{ item.id }}</td>
+      <td>{{ item.code }}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.category }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>
+        <p-button
+          icon="pi pi-trash"
+          pTooltip="Eliminar"
+          severity="primary"
+          [raised]="true"
+          [rounded]="true"
+          variant="text"
+        />
+      </td>
+      <td>
+        <p-button
+          icon="pi pi-pencil"
+          pTooltip="Actualizar"
+          (onClick)="findOne(item.id)"
+        />
+      </td>
+    </tr>
+  </ng-template>
+</p-table>
+

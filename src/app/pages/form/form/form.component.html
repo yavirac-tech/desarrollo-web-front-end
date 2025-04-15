@@ -1,0 +1,22 @@
+<!--{{ productIn | json }}-->
+<form >
+  <label for="">ID</label>
+  <input pInputText type="text" name="id" [(ngModel)]="productIn.id">
+
+  <br>
+  <label for="">Name</label>
+  <input pInputText type="text" name="name" [(ngModel)]="productIn.name">
+
+  <br>
+  <label for="">Quantity</label>
+  <input pInputText type="text" name="quantity" [(ngModel)]="productIn.quantity">
+
+  <br>
+  <label for="">Category</label>
+  <input pInputText type="text" name="category" [(ngModel)]="productIn.category">
+
+  <p-button label="Save Product" (onClick)="saveProduct()"/>
+  <p-button label="Send Product" severity="info" (onClick)="sendProduct()"/>
+  <p-button label="Update Product" severity="info" (onClick)="updateProduct()"/>
+  <p-button label="Evento1" (onClick)="sendEvent1()"/>
+</form>

@@ -1,7 +1,8 @@
 import {HomeComponent} from './home/home.component';
 import {AboutComponent} from './about/about.component';
 import {ContactComponent} from './contact/contact.component';
-import {FormComponent} from './form/form.component';
+import {ListComponent} from './form/list/list.component';
+import {FormComponent} from './form/form/form.component';
 
 export default [
   {
@@ -23,8 +24,8 @@ export default [
   },
 
   {
-    path: 'form/:id',
-    component: FormComponent,
+    path: 'form/list',
+    component: ListComponent,
     title: 'Form'
   },
 ];
