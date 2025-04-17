@@ -1,5 +1,6 @@
-import {Component, inject} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {Router, RouterLink} from '@angular/router';
+import {RegisterService} from '../../pages/auth/register/register.service';
 
 @Component({
   selector: 'app-topbar',
@@ -9,22 +10,31 @@ import {Router, RouterLink} from '@angular/router';
   templateUrl: './topbar.component.html',
   styleUrl: './topbar.component.scss'
 })
-export class TopbarComponent {
+export class TopbarComponent implements OnInit {
   private router: Router = inject(Router);
+  protected registerService = inject(RegisterService);
 
-  linkHome(){
+  ngOnInit(): void {
+    this.test();
+  }
+
+  test() {
+    console.log(this.registerService.user);
+  }
+
+  linkHome() {
     this.router.navigateByUrl('/pages/home');
   }
 
-  linkAbout(){
+  linkAbout() {
     this.router.navigateByUrl('/pages/about');
   }
 
-  linkContact(){
+  linkContact() {
     this.router.navigateByUrl('/pages/contact');
   }
 
-  linkForm(){
-    this.router.navigateByUrl('/pages/form/1');
+  linkForm() {
+    this.router.navigateByUrl('/pages/form/list');
   }
 }
